@@ -1,8 +1,8 @@
 {
-  "name": "text-scramble",
+  "name": "@twistezo/text-scramble",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "directories": {
     "example": "example"
   },
@@ -15,5 +15,17 @@
   "bugs": {
     "url": "https://github.com/twistezo/text-scramble/issues"
   },
-  "homepage": "https://github.com/twistezo/text-scramble#readme"
+  "homepage": "https://github.com/twistezo/text-scramble",
+  "scripts": {
+    "build": "babel src -d lib",
+    "prepublish": "babel src -d lib"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.8.1"
+  }
 }
