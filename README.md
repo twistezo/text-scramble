@@ -49,3 +49,15 @@ new TextScramble(
   1500
 )
 ```
+
+`TextScramble` constructor arguments:
+
+```js
+/**
+ * @param {string} domClass - DOM class to inject
+ * @param {String[]} sentences - Array of sentences
+ * @param {number} symbolChangeTime - Time to switch next random symbol [ms]
+ * @param {number} oneLetterTime - Time to finish letter [ms]
+ * @param {number} nextDelay - Delay beofre start new sentence [ms]
+ */
+```
