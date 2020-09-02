@@ -1,0 +1,19 @@
+{
+  "name": "text-scramble",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twistezo/text-scramble.git"
+  },
+  "author": "twistezo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twistezo/text-scramble/issues"
+  },
+  "homepage": "https://github.com/twistezo/text-scramble#readme"
+}
