@@ -1,7 +1,7 @@
 # Text scramble effect
 
-- pure JavaScript text scramble effect
-- small package ~10kB
+- pure JavaScript
+- lightweight package ~10kB
 - transpiled with Babel
 
 ## Setup
