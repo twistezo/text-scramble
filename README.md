@@ -1,6 +1,10 @@
 # Text scramble effect
 
-## Install
+- pure JavaScript text scramble effect
+- small package ~10kB
+- transpiled with Babel
+
+## Setup
 
 ```
 npm install @twistezo/text-scramble
@@ -12,19 +16,22 @@ yarn add @twistezo/text-scramble
 
 ## Usage
 
+### HTML
+
 ```html
-<!-- HTML file -->
 <div class="scramble">
   <span class="scramble__blinker">_</span>
   <span class="scramble__text"></span>
 </div>
 ```
 
+### SCSS
+
 ```scss
-// SCSS file
 .scramble {
   &__blinker {
     animation: blinker 0.5s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+
     @keyframes blinker {
       to {
         opacity: 0;
@@ -37,8 +44,9 @@ yarn add @twistezo/text-scramble
 }
 ```
 
+### JavaScript
+
 ```js
-// JavaScript file
 import TextScramble from '@twistezo/text-scramble'
 
 new TextScramble(
@@ -50,7 +58,7 @@ new TextScramble(
 )
 ```
 
-`TextScramble` constructor arguments:
+### `TextScramble` constructor arguments
 
 ```js
 /**
