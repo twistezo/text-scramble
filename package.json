@@ -1,6 +1,6 @@
 {
   "name": "@twistezo/text-scramble",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Text scramble effect",
   "main": "lib/index.js",
   "repository": {
