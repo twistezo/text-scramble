@@ -4,6 +4,8 @@
 - lightweight package ~10kB
 - transpiled with Babel
 
+## <a href="https://codesandbox.io/s/text-scramble-2rdrx">Live example</a>
+
 ## Setup
 
 ```
