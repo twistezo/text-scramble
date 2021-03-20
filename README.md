@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/dt/@twistezo/text-scramble)](https://www.npmjs.com/package/@twistezo/text-scramble)
+
 # Text scramble effect
 
 - pure JavaScript
