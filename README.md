@@ -1,6 +1,12 @@
-[![npm](https://img.shields.io/npm/dt/@twistezo/text-scramble)](https://www.npmjs.com/package/@twistezo/text-scramble)
+<div align="center">
 
 # Text scramble effect
+
+![](https://img.shields.io/npm/v/@twistezo/text-scramble?style=flat-square&color=9cf)
+![](https://img.shields.io/npm/dt/@twistezo/text-scramble?style=flat-square&color=9cf)
+![](https://img.shields.io/npm/l/@twistezo/text-scramble?style=flat-square&color=yellow)
+
+</div>
 
 - pure JavaScript
 - lightweight package ~10kB
