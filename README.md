@@ -2,8 +2,6 @@
 
 # Text scramble effect
 
-**[deprecated / no longer supported]**
-
 ![](https://img.shields.io/npm/v/@twistezo/text-scramble?style=flat-square&color=9cf)
 ![](https://img.shields.io/npm/dt/@twistezo/text-scramble?style=flat-square&color=9cf)
 ![](https://img.shields.io/npm/l/@twistezo/text-scramble?style=flat-square&color=yellow)
