@@ -8,20 +8,18 @@
 
 </div>
 
-- pure JavaScript
-- lightweight package ~10kB
-- transpiled with Babel
+- TypeScript support
+- lightweight
+- ESM and CJS support
 
-## <a href="https://codesandbox.io/s/text-scramble-2rdrx">Live example</a>
+## Examples
+
+- [Local examples](./examples/)
 
 ## Setup
 
-```
+```bash
 npm install @twistezo/text-scramble
-
-or
-
-yarn add @twistezo/text-scramble
 ```
 
 ## Usage
@@ -56,26 +54,48 @@ yarn add @twistezo/text-scramble
 
 ### JavaScript
 
-```js
+```ts
 import TextScramble from '@twistezo/text-scramble'
 
-new TextScramble(
+const scramble = new TextScramble(
   'scramble__text',
   ['Lorem ipsum 1', 'Lorem ipsum 2', 'Lorem ipsum 3'],
   5,
   100,
-  1500
+  1500,
 )
+
+// To stop the animation and cleanup:
+scramble.destroy()
 ```
 
 ### `TextScramble` constructor arguments
 
-```js
+```ts
 /**
- * @param {string} domClass - DOM class to inject
- * @param {String[]} sentences - Array of sentences
- * @param {number} symbolChangeTime - Time to switch next random symbol [ms]
- * @param {number} oneLetterTime - Time to finish letter [ms]
- * @param {number} nextDelay - Delay beofre start new sentence [ms]
+ * @param domClass - DOM class to inject
+ * @param sentences - Array of sentences
+ * @param symbolChangeTime - Time to switch next random symbol [ms]
+ * @param oneLetterTime - Time to finish letter [ms]
+ * @param nextDelay - Delay before start new sentence [ms]
  */
+```
+
+### Methods
+
+- `destroy()` - stops the animation, clears intervals and removes DOM children
+
+## Development
+
+```
+bun run example     # run examples
+bun run build       # build all formats
+
+bun run test        # run all tests
+bun run lint        # check lint
+bun run lint:fix    # fix lint & format
+bun run typecheck   # check types
+
+bunx npm login      # login to npm
+bun publish         # publish to npm
 ```

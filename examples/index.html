@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Scramble Effect - Example</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        font-family: 'Courier New', Courier, monospace;
+        color: #0f0;
+      }
+
+      .scramble {
+        font-size: 30px;
+      }
+
+      .scramble__blinker {
+        animation: blinker 0.5s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+      }
+
+      @keyframes blinker {
+        to {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scramble">
+      <span class="scramble__blinker">_</span>
+      <span class="scramble__text"></span>
+    </div>
+
+    <script type="module">
+      import TextScramble from '../dist/esm/index.mjs'
+
+      const scramble = new TextScramble(
+        'scramble__text',
+        ['Hello, World!', 'Text Scramble Effect', 'Pure TypeScript', 'Lightweight & Fast'],
+        5,
+        100,
+        1500,
+      )
+
+      // Optional: stop animation after 30 seconds
+      // setTimeout(() => scramble.destroy(), 30000)
+    </script>
+  </body>
+</html>

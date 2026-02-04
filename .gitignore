@@ -1,2 +1,5 @@
-/lib/
-/node_modules/
+.DS_Store
+.github
+dist
+node_modules
+package-lock.json

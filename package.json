@@ -1,36 +1,66 @@
 {
   "name": "@twistezo/text-scramble",
-  "version": "1.0.5",
+  "version": "1.1.0",
+  "author": "twistezo",
+  "license": "MIT",
   "description": "Text scramble effect",
-  "main": "lib/index.js",
+  "keywords": [
+    "text",
+    "scramble",
+    "effect",
+    "animation",
+    "typewriter"
+  ],
+  "homepage": "https://github.com/twistezo/text-scramble",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/twistezo/text-scramble.git"
   },
-  "author": "twistezo",
-  "license": "MIT",
-  "keywords": [
-    "text",
-    "scramble",
-    "effect"
-  ],
   "bugs": {
     "url": "https://github.com/twistezo/text-scramble/issues"
   },
-  "homepage": "https://github.com/twistezo/text-scramble",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "babel src -d lib",
-    "prepublish": "babel src -d lib"
+    "prebuild": "rm -rf dist",
+    "build": "bun run build:esm && bun run build:cjs && bun run build:types",
+    "build:esm": "bun build src/index.ts --outdir dist/esm --format esm",
+    "build:cjs": "bun build src/index.ts --outdir dist/cjs --format cjs",
+    "build:types": "bun run tsc --emitDeclarationOnly",
+    "postbuild": "mv dist/cjs/index.js dist/cjs/index.cjs && mv dist/esm/index.js dist/esm/index.mjs",
+    "test": "bun test",
+    "test:integration": "bun run test:integration:esm && bun run test:integration:cjs",
+    "test:integration:esm": "bun run build && bun tests/integration/test-dist-esm.mjs",
+    "test:integration:cjs": "bun run build && node tests/integration/test-dist-cjs.cjs",
+    "test:all": "bun test && bun run test:integration",
+    "lint": "bun run eslint src tests --ext ts",
+    "lint:fix": "bun run eslint src tests --ext ts --fix",
+    "typecheck": "bun run tsc --noEmit",
+    "prepublish": "bun run test:all && bun run lint && bun run typecheck",
+    "example": "bun run build && open http://localhost:3000/examples/index.html && bunx serve . -l 3000"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
   },
   "devDependencies": {
-    "@babel/cli": "^7.11.6",
-    "@babel/core": "^7.11.6",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/preset-env": "^7.11.5",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.8.1"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "@eslint/js": "^9.39.2",
+    "@happy-dom/global-registrator": "^17.4.4",
+    "@types/bun": "latest",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-perfectionist": "^5.4.0",
+    "eslint-plugin-prettier": "^5.5.5",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.53.1"
   }
 }
