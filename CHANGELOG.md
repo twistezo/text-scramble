@@ -1,12 +1,6 @@
 # Changelog
 
-## [1.1.1] - 2026-02-04
-
-### Fixed
-
-- `exports` field in package.json for better bundler compatibility (e.g. Parcel)
-
-## [1.1.0] - 2026-02-04
+## [1.1.2] - 2026-02-04
 
 ### Changed
 

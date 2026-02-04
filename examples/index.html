@@ -43,7 +43,7 @@
     </div>
 
     <script type="module">
-      import TextScramble from '../dist/esm/index.mjs'
+      import TextScramble from 'https://unpkg.com/@twistezo/text-scramble/dist/esm/index.mjs'
 
       const scramble = new TextScramble(
         'scramble__text',
@@ -54,7 +54,7 @@
       )
 
       // Optional: stop animation after 30 seconds
-      // setTimeout(() => scramble.destroy(), 30000)
+      setTimeout(() => scramble.destroy(), 30_000)
     </script>
   </body>
 </html>

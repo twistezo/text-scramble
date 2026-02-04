@@ -15,6 +15,7 @@
 ## Examples
 
 - [Local examples](./examples/)
+- [CodeSandbox](https://codesandbox.io/p/sandbox/text-scramble-9j75gx)
 
 ## Setup
 
