@@ -2,6 +2,9 @@
 
 # Text scramble effect
 
+**DEPRECATED**: This project is no longer being maintained.
+
+![](https://unmaintained.tech/badge.svg)
 ![](https://img.shields.io/npm/v/@twistezo/text-scramble?style=flat-square&color=9cf)
 ![](https://img.shields.io/npm/dt/@twistezo/text-scramble?style=flat-square&color=9cf)
 ![](https://img.shields.io/npm/l/@twistezo/text-scramble?style=flat-square&color=yellow)
