@@ -4,6 +4,8 @@
 
 **DEPRECATED**: This project is no longer being maintained.
 
+Use https://github.com/twistezo/react-text-scramble which supports Vanilla JS/TS.
+
 ![](https://unmaintained.tech/badge.svg)
 ![](https://img.shields.io/npm/v/@twistezo/text-scramble?style=flat-square&color=9cf)
 ![](https://img.shields.io/npm/dt/@twistezo/text-scramble?style=flat-square&color=9cf)
